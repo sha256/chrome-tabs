@@ -168,7 +168,7 @@
           }
         });
         return $tab.find('.chrome-tab-close').unbind('click').click(function() {
-          return chromeTabs.closeTab($shell, $tab);
+         $tab.trigger('close-tab', $tab);
         });
       });
     },
